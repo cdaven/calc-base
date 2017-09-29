@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Mall</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet"> 
+  <link href="../semantic/dist/semantic.min.css" rel="stylesheet" />
+  <link href="../semantic/dist/components/form.min.css" rel="stylesheet" />
+  <style type="text/css">
+  .ui.main {
+    margin-top: 7em;
+  }
+  .ui.footer.segment {
+    margin: 5em 0em 0em;
+    padding: 5em 0em;
+  }
+  </style>
+</head>
+<body>
+  <header class="ui fixed inverted menu">
+    <div class="ui container">
+      <a href="#" class="header item">
+        Webbplatsens namn
+      </a>
+      <a href="#" class="item">Home</a>
+      <div class="ui simple dropdown item">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item" href="#">Link Item</a>
+          <a class="item" href="#">Link Item</a>
+          <div class="divider"></div>
+          <div class="header">Header Item</div>
+          <div class="item">
+            <i class="dropdown icon"></i>
+            Sub Menu
+            <div class="menu">
+              <a class="item" href="#">Link Item</a>
+              <a class="item" href="#">Link Item</a>
+            </div>
+          </div>
+          <a class="item" href="#">Link Item</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="ui main container">
+    <h1 class="ui dividing header">
+      Gör något här
+      <div class="sub header">
+        Underrubrik
+      </div>
+    </h1>
+    <p>Beskrivning av grejen som man kan göra.</p>
+    <div class="ui ad">
+      Annons!
+    </div>
+    <form class="ui form">
+        <div class="field">
+          <label>First Name</label>
+          <input name="first-name" placeholder="First Name" type="text">
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input name="last-name" placeholder="Last Name" type="text">
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input tabindex="0" class="hidden" type="checkbox">
+            <label>I agree to the Terms and Conditions</label>
+          </div>
+        </div>
+        <button class="ui button" type="submit">Submit</button>
+      </form>
+      <p>Eftersnack ...</p>
+  </div>
+
+  <div class="ui inline cookie nag">
+    <span class="title">
+      We use cookies to ensure you get the best experience on our website
+    </span>
+    <i class="close icon"></i>
+  </div>
+
+  <footer class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+      <div class="ui horizontal inverted small divided link list">
+        <a class="item" href="#">Site Map</a>
+        <a class="item" href="#">Contact Us</a>
+        <a class="item" href="#">Terms and Conditions</a>
+        <a class="item" href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="../semantic/dist/semantic.min.js"></script>
+<script>
+  $(document)
+    .ready(function() {
+      $('.ui.selection.dropdown').dropdown();
+      $('.ui.menu .ui.dropdown').dropdown({
+        on: 'hover'
+      });
+
+      // Automatically shows on init if cookie isnt set
+      $('.cookie.nag').nag({
+        key      : 'accepts-cookies',
+        value    : true
+      });
+
+      $('.ui.form').form();
+  });
+</script>
+  
