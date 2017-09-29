@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "commonjs",
+        "removeComments": true,
+        "allowJs": true,
+        "outDir": "dist/scripts"
+    },
+    "include": [
+        "src/scripts/*.ts",
+        "src/scripts/*.js"
+    ],
+    "exclude": [
+
+    ]
+}

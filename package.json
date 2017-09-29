@@ -1,0 +1,29 @@
+{
+  "name": "calc-base",
+  "version": "0.0.0",
+  "description": "Base template for my calculator websites",
+  "author": "Christian Davén <christian@daven.se>",
+  "license": "Unlicense",
+  "repository": "https://github.com/cdaven/calc-base",
+  "devDependencies": {
+    "catw": "^1.0.1",
+    "jade": "^1.11.0",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1",
+    "typescript": "^2.4.2"
+  },
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "build": "npm-run-all -p build:*",
+    "watch": "npm-run-all -p watch:*",
+    "build:styles": "node-sass --quiet src/styles -o dist/styles",
+    "watch:styles": "node-sass --quiet --watch --source-map true src/styles -o dist/styles",
+    "build:scripts": "tsc",
+    "watch:scripts": "tsc --watch",
+    "build:images": "cp -R src/images/* dist/images/",
+    "build:jade": "jade src/*.jade --out dist"
+  },
+  "dependencies": {
+    "semantic-ui": "^2.2.13"
+  }
+}
