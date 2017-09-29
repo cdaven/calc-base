@@ -1,3 +1,21 @@
 /*******************************
      User Global Variables
 *******************************/
+
+@pageFont : Bitter, serif;
+@headerFont : @pageFont;
+@importGoogleFonts : false;
+
+@emSize : 15px; /* Kan inte sätta denna till %, då blir formulären fula */
+@fontSize : 1em;
+@lineHeight: 1.42;
+
+@primaryColor   : @green;
+@secondaryColor : @blue;
+@green : #508D00;
+@blue : #00279A;
+@orange : #D9340B;
+@red : #5A1909;
+
+@pageBackground: #f0f0f0;
+@textColor: #2e2e2e;
