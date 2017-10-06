@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Mall</title>
+  <title>Räkna.net</title>
 
   <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet"> 
   <link href="../semantic/dist/semantic.min.css" rel="stylesheet" />
@@ -24,7 +24,7 @@
   <header class="ui fixed inverted menu">
     <div class="ui container">
       <a href="#" class="header item">
-        Webbplatsens namn
+        Räkna.net
       </a>
       <a href="#" class="item">Home</a>
       <div class="ui simple dropdown item">
@@ -55,28 +55,45 @@
         Underrubrik
       </div>
     </h1>
-    <p>Beskrivning av grejen som man kan göra.</p>
+    <p>Beräkna hur mycket pengar du får behålla av din lön varje månad och hur mycket du betalar i inkomstskatt.</p>
+      
+      <p>Är du arbetsgivare? Använd istället <a href="#">den här andra räknaren</a> för att beräkna hur mycket lön som du ska betala ut.</p>
     <div class="ui ad">
       Annons!
     </div>
     <form class="ui form">
-        <div class="field">
-          <label>First Name</label>
-          <input name="first-name" placeholder="First Name" type="text">
-        </div>
-        <div class="field">
-          <label>Last Name</label>
-          <input name="last-name" placeholder="Last Name" type="text">
-        </div>
-        <div class="field">
-          <div class="ui checkbox">
-            <input tabindex="0" class="hidden" type="checkbox">
-            <label>I agree to the Terms and Conditions</label>
+      <div class="field">
+        <label>Vad har du i lön?</label>
+        <div class="ui large right labeled input">
+          <input name="salary" placeholder="Lön" value="25000" type="text">
+          <div class="ui basic label">
+            kr/mån
           </div>
         </div>
-        <button class="ui button" type="submit">Submit</button>
-      </form>
-      <p>Eftersnack ...</p>
+      </div>
+      
+      <div class="field">
+        <div class="ui fluid search selection dropdown">
+          <input name="country" type="hidden">
+          <i class="dropdown icon"></i>
+          <div class="default text">Välj församling</div>
+          <div class="menu">
+            <div class="item" data-value="123456"><i class="af flag"></i>Skerike församling</div>
+            <div class="item" data-value="123456"><i class="af flag"></i>Adolf Fredriks församling</div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="field">
+        <div class="ui checkbox">
+          <input tabindex="0" class="hidden" type="checkbox">
+          <label>Medlem i Svenska kyrkan</label>
+        </div>
+      </div>
+
+      <button class="ui primary button" type="submit">Beräkna</button>
+    </form>
+    <p>Din arbetsgivare använder vanligtvis en tabell från Skatteverket för att beräkna den preliminära skatt som ska dras från din lön varje månad. Vid deklarationen beräknas sedan din slutgiltiga skatt, som påverkas av exempelvis ränteavdrag, försäljning av värdepapper och fastigheter.</p>
   </div>
 
   <div class="ui inline cookie nag">
@@ -103,9 +120,8 @@
   $(document)
     .ready(function() {
       $('.ui.selection.dropdown').dropdown();
-      $('.ui.menu .ui.dropdown').dropdown({
-        on: 'hover'
-      });
+      $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
+      $('.ui.checkbox').checkbox();
 
       // Automatically shows on init if cookie isnt set
       $('.cookie.nag').nag({
