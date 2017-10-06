@@ -17,5 +17,5 @@
 @orange : #D9340B;
 @red : #5A1909;
 
-@pageBackground: #f0f0f0;
-@textColor: #2e2e2e;
+@pageBackground      : #EFFFEF;
+@textColor           : #212121;
