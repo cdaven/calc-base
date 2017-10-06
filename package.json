@@ -7,9 +7,9 @@
   "repository": "https://github.com/cdaven/calc-base",
   "devDependencies": {
     "catw": "^1.0.1",
-    "jade": "^1.11.0",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.1.1",
+    "pug-cli": "^1.0.0-alpha6",
     "typescript": "^2.4.2"
   },
   "scripts": {
@@ -20,8 +20,8 @@
     "watch:styles": "node-sass --quiet --watch --source-map true src/styles -o dist/styles",
     "build:scripts": "tsc",
     "watch:scripts": "tsc --watch",
-    "build:images": "cp -R src/images/* dist/images/",
-    "build:jade": "jade src/*.jade --out dist"
+    "build:images": "cp -R src/images/* dist/images/ 2>/dev/null",
+    "build:pug": "pug src/*.pug --out dist"
   },
   "dependencies": {
     "semantic-ui": "^2.2.13"
