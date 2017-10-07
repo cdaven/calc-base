@@ -33,7 +33,13 @@ or,
 
 ## Re-build Semantic-UI
 
-Semantic-UI can be customized in the semantic folder, and then rebuilt:
+Semantic-UI can be customized in the semantic folder, and then rebuilt.
+
+First,
+
+    cd semantic && npm install
+
+Then rebuild with,
 
     npm run rebuild:semantic
 
