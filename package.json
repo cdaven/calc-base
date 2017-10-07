@@ -6,26 +6,24 @@
   "license": "Unlicense",
   "repository": "https://github.com/cdaven/calc-base",
   "devDependencies": {
-    "@types/es6-shim": "^0.31.35",
     "@types/jquery": "^3.2.13",
+    "@types/lodash": "^4.14.77",
     "@types/semantic-ui": "^2.2.5",
-    "catw": "^1.0.1",
-    "core-js": "^2.5.1",
-    "jquery": "^3.2.1",
+    "imagemin-cli": "^3.0.0",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.1.1",
     "pug-cli": "^1.0.0-alpha6",
     "typescript": "^2.4.2"
   },
   "scripts": {
-    "clean": "rm -rf dist/*",
+    "clean": "rm -rf dist && mkdir -p dist/{images,scripts,styles}",
     "build": "npm-run-all -p build:*",
-    "watch": "npm-run-all -p watch:*",
-    "build:styles": "node-sass --quiet src/styles -o dist/styles",
+    "watch": "watch 'npm run build' .",
+    "build:styles": "node-sass --quiet --output-style compressed src/styles -o dist/styles",
     "watch:styles": "node-sass --quiet --watch --source-map true src/styles -o dist/styles",
     "build:scripts": "tsc",
     "watch:scripts": "tsc --watch",
-    "build:images": "cp -R src/images/* dist/images/",
+    "build:images": "imagemin src/images/* -o dist/images",
     "build:pug": "pug src/*.pug --out dist",
     "build:jquery": "cp node_modules/jquery/dist/jquery.min.js dist/scripts/",
     "build:lodash": "cp node_modules/lodash/dist/lodash.min.js dist/scripts/",
@@ -34,6 +32,9 @@
     "build:core-js": "cp node_modules/core-js/client/shim.min.js dist/scripts/core-js.shim.min.js"
   },
   "dependencies": {
+    "core-js": "^2.5.1",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
     "semantic-ui": "^2.2.13"
   }
 }
