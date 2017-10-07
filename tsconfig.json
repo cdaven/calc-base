@@ -1,8 +1,20 @@
 {
     "compilerOptions": {
-        "target": "ES5",
+        // Target ES5 for best browser compatibility
+        "target": "es5",
         "module": "commonjs",
+        "sourceMap": false,
         "removeComments": true,
+        // Necessary for Semantic-UI, which uses Symbol.iterator from ES2015
+        "downlevelIteration": true,
+        "lib": [
+            "dom",
+            "es5",
+            // We include a ES2015 polyfill (core-js) to implement these features
+            "es2015.collection",
+            "es2015.iterable",
+            "es2015.promise"
+        ],
         "allowJs": true,
         "outDir": "dist/scripts"
     },
