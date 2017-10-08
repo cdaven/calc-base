@@ -1,0 +1,57 @@
+doctype html
+html
+    head
+        block meta
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        block styles
+            <link href="images/pocket-calculator.png" rel="shortcut icon" type="image/png" />
+            <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet"> 
+            <link href="styles/semantic.min.css" rel="stylesheet" />
+            <link href="styles/main.css" rel="stylesheet" />
+    body
+        header.ui.fixed.inverted.menu
+            .ui.container
+                a(href="#" class="header item") Räkna.net
+                <a href="#" class="item">Home</a>
+                .ui.simple.dropdown.item Dropdown
+                    <i class="dropdown icon"></i>
+                    .menu
+                        <a class="item" href="#">Link Item</a>
+                        <a class="item" href="#">Link Item</a>
+                        .divider
+                        .header Header Item
+                        .item
+                            i.icon.dropdown
+                            | Sub Menu
+                            .menu
+                                <a class="item" href="#">Link Item</a>
+                                <a class="item" href="#">Link Item</a>
+                        <a class="item" href="#">Link Item</a>
+
+        .ui.main.container
+            block content
+                p Nothing to see.
+
+        footer.ui.inverted.vertical.footer.segment
+            .ui.stackable.grid.container.relaxed
+                .four.wide.column
+                    .ui.inverted.relaxed.divided.list
+                        <a class="item" href="#">Site Map</a>
+                        <a class="item" href="#">Contact Us</a>
+                        <a class="item" href="#">Terms and Conditions</a>
+                        <a class="item" href="#">Privacy Policy</a>
+                .four.wide.column
+                    p From Sweden with Love
+                .eight.wide.column
+                    p Denna webbplats använder <a href="http://www.minacookies.se/allt-om-cookies/">cookies</a> för att förbättra din användarupplevelse och analysera hur hemsidan används, samt erbjuda mer relevanta annonser.
+
+block scripts
+    script(src="scripts/jquery.min.js")
+    // Core-js shim for ES6 features in Semantic
+    script(src="scripts/core-js.shim.min.js")
+    script(src="scripts/semantic.min.js")
+    script(src="scripts/lodash.min.js")
+    script(src="scripts/app.js")

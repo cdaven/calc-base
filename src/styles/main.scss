@@ -1,9 +1,14 @@
 .ui {
-    &.main {
-        margin-top: 7em;
-    }
     &.footer.segment {
         margin: 5em 0em 0em;
         padding: 5em 0em;
+    }
+}
+
+.ui.main.container {
+    margin-top: 7em;
+
+    div.results {
+        margin: 1em 0;
     }
 }

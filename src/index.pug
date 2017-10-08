@@ -1,34 +1,46 @@
-doctype html
-<html>
+extends tmpl/layout.pug
 
-include head.pug
+block append meta
+    title Räkna.net
 
-body
-    header(class="ui fixed inverted menu")
-        div(class="ui container")
-            a(href="#" class="header item") Räkna.net
-            <a href="#" class="item">Home</a>
-            <div class="ui simple dropdown item">
-                Dropdown <i class="dropdown icon"></i>
-                <div class="menu">
-                <a class="item" href="#">Link Item</a>
-                <a class="item" href="#">Link Item</a>
-                <div class="divider"></div>
-                <div class="header">Header Item</div>
-                <div class="item">
-                    <i class="dropdown icon"></i>
-                    Sub Menu
-                    <div class="menu">
-                    <a class="item" href="#">Link Item</a>
-                    <a class="item" href="#">Link Item</a>
-                    </div>
-                </div>
-                <a class="item" href="#">Link Item</a>
-                </div>
-            </div>
+block content
+    h1(class="ui dividing header") Gör något här
+        .sub.header Underrubrik
 
-    div(class="ui main container")
-        h1(class="ui dividing header") Gör något här
-            div(class="sub header") Underrubrik
+    p Beräkna hur mycket pengar du får behålla av din lön varje månad och hur mycket du betalar i inkomstskatt.
 
-include foot.pug
+    p Är du arbetsgivare? Använd istället <a href="#">den här andra räknaren</a> för att beräkna hur mycket lön som du ska betala ut.
+    
+    .ui.ad Annons!
+
+    form.ui.form
+        .field
+            label Vad har du i lön?
+            .ui.large.right.labeled.input
+                input(name="salary" placeholder="Lön" value="25000" type="text")
+                .ui.basic.label kr/mån
+
+        .field
+            .ui.fluid.search.selection.dropdown
+                input(name="country" type="hidden")
+                i.icon.dropdown
+                .default.text Välj församling
+                .menu
+                    .item(data-value="1") Skerike församling
+                    .item(data-value="2") Adolf Fredriks församling
+
+        .field
+            .ui.checkbox
+                input(tabindex="0" class="hidden" type="checkbox")
+                label Medlem i Svenska kyrkan
+
+        button.ui.primary.button(type="submit") Beräkna
+
+    .results
+        p#resultsp
+            strong Resultat:
+            span#results Du får 19 241 kr i månaden efter skatt
+
+    p 
+        | Din arbetsgivare använder vanligtvis en tabell från Skatteverket för att beräkna den preliminära skatt som ska dras från din lön varje månad.
+        | Vid deklarationen beräknas sedan din slutgiltiga skatt, som påverkas av exempelvis ränteavdrag, försäljning av värdepapper och fastigheter.
