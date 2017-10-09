@@ -2,7 +2,7 @@
      User Global Variables
 *******************************/
 
-@pageFont : Bitter, serif;
+@pageFont : Montserrat, sans-serif;
 @headerFont : @pageFont;
 @importGoogleFonts : false;
 
@@ -17,5 +17,5 @@
 @orange : #D9340B;
 @red : #5A1909;
 
-@pageBackground      : #EFFFEF;
-@textColor           : #212121;
+@pageBackground      : #fbfff5;
+@textColor           : #0c1400;
