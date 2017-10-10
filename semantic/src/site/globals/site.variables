@@ -18,4 +18,4 @@
 @red : #5A1909;
 
 @pageBackground      : #fbfff5;
-@textColor           : #0c1400;
+@textColor           : #000000;

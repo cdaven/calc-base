@@ -14,26 +14,20 @@ html
     body
         header.ui.fixed.inverted.menu
             .ui.container
-                a(href="#" class="header item") Räkna.net
-                <a href="#" class="item">Home</a>
-                .ui.simple.dropdown.item Dropdown
-                    <i class="dropdown icon"></i>
+                a.header.item(href="/") Räkna.net
+                .ui.simple.dropdown.item Fler räknare
+                    i.icon.dropdown
                     .menu
-                        <a class="item" href="#">Link Item</a>
-                        <a class="item" href="#">Link Item</a>
+                        a.item(href="#") Räknare 1
+                        a.item(href="#") Räknare 2
                         .divider
-                        .header Header Item
-                        .item
-                            i.icon.dropdown
-                            | Sub Menu
-                            .menu
-                                <a class="item" href="#">Link Item</a>
-                                <a class="item" href="#">Link Item</a>
-                        <a class="item" href="#">Link Item</a>
+                        .header Rubrik
+                        a.item(href="#") Räknare 3
+                        a.item(href="#") Räknare 4
 
         .ui.main.container
             block content
-                p Nothing to see.
+                p ...
 
         footer.ui.inverted.vertical.footer.segment
             .ui.stackable.grid.container.relaxed
