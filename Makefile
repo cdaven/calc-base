@@ -5,7 +5,7 @@ default: all
 .PHONY: clean all semantic pug scripts styles
 
 clean:
-	npm run build:pug
+	npm run clean
 
 all:
 	npm run build
