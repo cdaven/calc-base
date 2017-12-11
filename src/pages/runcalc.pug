@@ -1,0 +1,29 @@
+extends ../page_includes/layout.pug
+
+block append meta
+    title RunCalc
+
+block content
+    h1(class="ui dividing header") RunCalc
+        .sub.header Because running counts
+
+    p Beräkna hur mycket pengar du får behålla av din lön varje månad och hur mycket du betalar i inkomstskatt.
+
+    .ui.ad Annons!
+
+    label Enter a distance
+    .ui.search
+        .ui.large.input
+            input.prompt(name="distance" placeholder="Distance" type="text")
+        .results
+
+    label Enter a time or pace/speed
+    .ui.search
+        .ui.large.input
+            input.prompt(name="timeorpace" placeholder="Time or pace" type="text")
+        .results
+
+    button.ui.primary.button(type="submit") Calculate
+
+block append scripts
+    script(src="scripts/runcalc.js")
