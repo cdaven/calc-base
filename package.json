@@ -29,7 +29,7 @@
     "watch:pug": "pug --out dist --watch src/pages",
     "build:jquery": "cp node_modules/jquery/dist/jquery.min.js dist/scripts/",
     "build:lodash": "uglifyjs node_modules/lodash/lodash.js --compress --screw-ie8 --output dist/scripts/lodash.min.js",
-    "build:semantic": "cp semantic/dist/semantic.min.js dist/scripts/ && cp semantic/dist/semantic.min.css dist/styles/",
+    "build:semantic": "cp -R semantic/dist/* dist/semantic/",
     "rebuild:semantic": "cd semantic && gulp build && cd ..",
     "build:core-js": "cp node_modules/core-js/client/shim.min.js dist/scripts/core-js.shim.min.js"
   },
