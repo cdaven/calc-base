@@ -1,12 +1,10 @@
 {
     "compilerOptions": {
-        // Target ES5 for best browser compatibility
-        "target": "es5",
+        "target": "es5", // Target ES5 for browser compatibility
         "module": "commonjs",
         "sourceMap": false,
         "removeComments": true,
-        // Necessary for Semantic-UI, which uses Symbol.iterator from ES2015
-        "downlevelIteration": true,
+        "downlevelIteration": true, // Necessary for Semantic-UI, which uses Symbol.iterator from ES2015
         "lib": [
             "dom",
             "es5",
@@ -16,7 +14,14 @@
             "es2015.promise"
         ],
         "allowJs": true,
-        "outDir": "dist/scripts"
+        "outDir": "dist/scripts",
+        // Tighten up TypeScript compilation rules
+        "noEmitOnError": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "strictNullChecks": true
     },
     "include": [
         "src/scripts/*.ts",
